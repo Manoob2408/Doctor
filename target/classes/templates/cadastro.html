@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link href="css/style.css" rel="stylesheet">
+
+<head>
+    <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="cadastro.html">Cadastro</a></header>
+    <title>Cadastro</title>
+    <meta charset="utf-8">
+    <script src="funcoes.js"></script>
+
+    <img src="https://i.ibb.co/YywLC81/msd-1.png" height=130px width=130px></img>
+    <h1>My Simple Doctor</h1>
+    <p>Bem-vindo ao My Simple Doctor!
+        <br>Aqui você pode inserir seus sintomas e encontrar medicamentos que podem ser sua solução!</p>
+
+</head>
+
+<body>
+    <aside>
+        <div>
+            <h2>Menu</h2>
+            <a href="#">Fitoterápicos</a><br>
+            <a href="#">Homeopáticos</a><br>
+            <a href="farmacias.html">Farmácias</a><br>
+            <a href="#">Médicos</a>
+        </div>
+    </aside>
+    <article>
+        <form class="cadastro">
+            <div class="imgcontainer">
+                <img src="https://i.ibb.co/Msh3bXY/User.png" alt="User" class="avatar"></img>
+            </div><br>
+            <div class="container">
+                <label for="uname"><b>Nome Completo</b></label><br>
+                <input type="text" placeholder="Insira o seu nome" name="uname" required><br>
+
+                <label for="date"><b>Data de nascimento</b></label><br>
+                <input style="color: #777d78" id="date" type="date" required><br>
+
+                <label for="gender"><b>Gênero</b></label><br>
+                <select name="gender" id="gender">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+
+                <label for="email"><b>Email</b></label><br>
+                <input type="text" placeholder="exemplo@exemplo.com" name="email" required><br>
+
+                <label for="user"><b>Usuário</b></label><br>
+                <input type="text" placeholder="Insira o usuário" name="user" required><br>
+
+                <label for="psw"><b>Senha</b></label><br>
+                <input type="password" placeholder="Insira a senha" name="psw" required><br>
+
+                <button type="submit">Cadastrar</button>
+            </div><br>
+            <div class="container">
+                <button type="button" class="cancelbtn">Cancelar</button>
+            </div><br>
+
+
+        </form>
+    </article>
+    <footer>
+
+        Nosso site é um projeto sem fins lucrativos que visa indicar um tratamento positivo dos sintomas de acordo com as avaliações, porém não substitui a opinião médica.
+        <br>Não nos responsabilizamos por nenhum efeito colateral. Se os sintomas persistirem, procure um médico. Desenvolvedores do site: Emanuela Lopez e Joel Ribeiro
+    </footer>
+
+
+</body>
+
+
+
+</html>

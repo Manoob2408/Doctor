@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link href="css/style.css" rel="stylesheet">
+
+<head>
+    <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="Controller/cadastro.html">Cadastro</a></header>
+    <title>Farmácias</title>
+    <meta charset="utf-8">
+    <script src="funcoes.js"></script>
+
+    <img src="https://i.ibb.co/YywLC81/msd-1.png" height=130px width=130px></img>
+    <h1>My Simple Doctor</h1>
+    <p>
+        <br>Aqui você pode encontrar as farmácias mais próximas de você!</p>
+
+    <div class="buscapharmacy">
+
+        <div class="city">
+            <input type="text" id="txtBusca" placeholder="Insira sua cidade" />
+        </div>
+
+        <div class="state">
+            <select name="state" id="state" placeholder="Estado">
+                <option value="acre">AC</option>
+                <option value="alagoas">AL</option>
+                <option value="amapa">AP</option>
+                <option value="amazonas">AM</option>
+                <option value="bahia">BA</option>
+                <option value="ceara">CE</option>
+                <option value="espiritos">ES</option>
+                <option value="goias">GO</option>
+                <option value="maranhao">MA</option>
+                <option value="matog">MT</option>
+                <option value="matos">MS</option>
+                <option value="minas">MG</option>
+                <option value="para">PA</option>
+                <option value="paraiba">PB</option>
+                <option value="parana">PR</option>
+                <option value="pernamb">PE</option>
+                <option value="piaui">PI</option>
+                <option value="rio">RJ</option>
+                <option value="rion">RN</option>
+                <option value="rios">RS</option>
+                <option value="rond">RO</option>
+                <option value="rora">RR</option>
+                <option value="santac">SC</option>
+                <option value="saop">SP</option>
+                <option value="serg">SE</option>
+                <option value="toca">TO</option>
+                <option value="distritof">DF</option>
+
+
+            </select>
+        </div>
+
+        <button id="search" href="javascript:void(0)" onclick="Buscarf()">Buscar</button>
+
+    </div>
+
+</head>
+
+<body>
+    <div class="menu">
+        <div>
+            <h2>Menu</h2>
+            <a href="#">Fitoterápicos</a><br>
+            <a href="#">Homeopáticos</a><br>
+            <a href="farmacias.html">Farmácias</a><br>
+            <a href="#">Médicos</a>
+        </div>
+    </div>
+    <section>
+        <article>
+            <img src="https://i.ibb.co/mRXwrv2/Pague-menos.jpg" height=100px width=200px></img>
+            <div class="text">Sorocaba - SP
+                <br>Endereço: lorem ipsum
+                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
+                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
+                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.<br>
+            </div>
+            <div id="avaliacao">
+                <br>Avalie a farmácia:<br>
+                <a href="javascript:void(0)" onclick="Avaliar(1)">
+                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s1" width=30px height=30px></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(2)">
+                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s2" width=30px height=30px></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(3)">
+                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s3" width=30px height=30px></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(4)">
+                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s4" width=30px height=30px></a>
+
+                <a href="javascript:void(0)" onclick="Avaliar(5)">
+                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s5" width=30px height=30px></a>
+                <p id="rating">0</p>
+            </div>
+
+        </article>
+    </section>
+
+
+
+    <footer>
+
+        Nosso site é um projeto sem fins lucrativos que visa indicar um tratamento positivo dos sintomas de acordo com as avaliações, porém não substitui a opinião médica.
+        <br>Não nos responsabilizamos por nenhum efeito colateral. Se os sintomas persistirem, procure um médico. Desenvolvedores do site: Emanuela Lopez e Joel Ribeiro
+    </footer>
+
+
+</body>
+
+
+
+</html>
