@@ -1,0 +1,1 @@
+SELECT * FROM Medicamentos WHERE DescriptionM = 'ASMA' 
