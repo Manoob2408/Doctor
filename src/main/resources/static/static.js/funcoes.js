@@ -115,12 +115,13 @@ function Avaliar(estrela) {
 function Buscar() {
 
 
-    var botao = document.getElementById("btnBusca");
-    botao.addEventListener('click', function() {
+    //var botao = document.getElementById("btnBusca");
+    //var filter = botao.value.toUpperCase();
 
-        alert(document.getElementById("txtBusca").value);
+    alert(document.getElementById("txtBusca").value);
 
-    })
+
+
 
 }
 

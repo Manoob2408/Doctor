@@ -176,14 +176,16 @@ footer{
     
   }
   
-  #txtBusca{
+  #txtBusca, input:focus{
     float:left;
+    color: #777d78;
     background-color:transparent;
     padding-left:20px;
     font-size:24px;
     border:none;
     height:38px;
     width:600px;
+    outline: none;
   }
   
   #btnBusca{
@@ -198,6 +200,7 @@ footer{
     font-size:18px;
     color: white;
     cursor: pointer;
+    outline: none;
   }
   
 
@@ -230,7 +233,7 @@ img{
   font-family: verdana;
   font-size: 20px;
   margin: 10px 0px 10px 300px;
-
+  outline: none;
 }
 
 .login label{
@@ -263,6 +266,8 @@ img{
   color: white;
   background-color: #66c2ff;
   cursor: pointer;
+  outline: none;
+
 
 }
 
@@ -283,9 +288,10 @@ img.avatar {
   text-align: auto;
   margin-left:270px;
   padding: 10px;
+
 }
 
-.cadastro input, .cadastro select{
+.cadastro input,.cadastro input:focus, .cadastro select{
   border: solid  2px #66c2ff;
   border-radius: 7px;
   width: 500px;
@@ -294,6 +300,7 @@ img.avatar {
   font-size: 20px;
   margin: 10px 0px 10px 270px;
   color: #777d78;
+  outline: none;
 
 }
 
