@@ -147,16 +147,16 @@ header a{
   font-size: 16px;
   font-family: Verdana;
   margin: 40px 0px 0px 100px;
-  max-width: 1000px;
+  max-width: 900px;
 
 }
 
-td{
+tbody{
   color: #777d78;
   text-align: center;
   font-size: 16px;
   font-family: Verdana;
-  margin: 60px 0px 0px 100px;
+  margin: 0px 0px 0px 100px;
   max-width: 1000px;
 }
 
@@ -230,7 +230,7 @@ img{
  #avaliacao ,.text{
 
   float: left;
-  margin:0px 700px 10px 0px;
+  margin:0px 0px 10px 0px;
 
 }
 
