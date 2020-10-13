@@ -114,14 +114,68 @@ function Avaliar(estrela) {
 
 function Buscar() {
 
+    var dados=
+        [   ["Dorflex","DORES MUSCULARES"],
+            ["Buscofem", "CÓLICAS MENSTRUAIS"],
+            ["ACETATO_DE_MEDROXIPROGESTERONA_150MG","ANTICONCEPÇÃO"],
+            ["ALENDRONATO DE SÓDIO 70MG", "OSTEOPOROSE"],
+            ["ATENOLOL 25MG", "HIPERTENSÃO (PRESSÃO ALTA)"],
+            ["BROMETO DE IPRATRÓPIO 0,02MG", "ASMA"],
+            ["BROMETO DE IPRATRÓPIO 0,25MG", "ASMA"],
+            ["BUDESONIDA 32MCG", "RINITE"],
+            ["CAPTOPRIL 25MG ", "HIPERTENSÃO (PRESSÃO ALTA)"],
+            ["CARBIDOPA 25MG + LEVODOPA 250MG", "PARKINSON"],
+            ["CLORIDRATO DE BENSERAZIDA 25MG + LEVODOPA 100MG","PARKINSON"],
+            ["CLORIDRATO DE METFORMINA 500MG", "DIABETES"],
+            ["MALEATO DE TIMOLOL 2,5MG", "GLAUCOMA"],
+            ["SINVASTATINA 10MG", "DISLIPDEMIA (COLESTEROL ALTO)"]
+    ];
 
-    //var botao = document.getElementById("btnBusca");
-    //var filter = botao.value.toUpperCase();
+    var tbody = document.getElementById("tbody");
+    for(var i=0; i<dados.length; i++) //Inserir itens na tabela
+    {
+        var tr ="<tr>" +
+            "<td>" + dados[i] + "</td>" +
+            "</tr>";
 
-    alert(document.getElementById("txtBusca").value);
+        tbody.innerHTML += tr;
+        var tr = tbody.childNodes;
+        console.log(tr.value);
+    }
 
+   
+    var busca = document.getElementById("txtBusca").value.toUpperCase();
+    console.clear();
 
+    for(var i =0; i<tbody.childNodes.length; i++)
+    {
+        console.clear();
+        var achou = false;
+        var tr = tbody.childNodes[i];
+        var td = tr.childNodes;
 
+        for(var j=0; j< td.length; j++)
+        {
+            var value = td[j].childNodes[0].nodeValue.toUpperCase();
+            console.log(value);
+
+            if(value.indexOf(busca)>=0)
+            {
+                achou = true;
+        
+            }
+        }
+        if(achou==true){
+            tr.style.display = "table-row";   
+        }else{
+            tr.style.display = "none";
+
+        }
+        
+    }
+    
+
+    
 
 }
 

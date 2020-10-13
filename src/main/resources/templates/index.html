@@ -17,7 +17,7 @@
     <div id="divBusca">
 
         <input type="text" id="txtBusca" placeholder="Insira seus sintomas aqui" />
-        <button id="btnBusca" href="javascript:void(0)" onclick="Buscar()">Buscar</button>
+        <button id="btnBusca" href="javascript:void(0)" onclick= "Buscar()">Buscar</button>
 
     </div>
 
@@ -34,38 +34,33 @@
         </div>
     </div>
     <section>
-        <article>
-            <img class="med" src="https://i.ibb.co/jG1MsBR/Dorflex.jpg" height=150px width=200px></img>
-            <div id="description">
-                <br><p style="color:#66c2ff; text-align: left; margin: -10px 0px 5px 10px; font-weight: bold; font-size: 24px;">
-                Dorflex</p>
-                <br>Esse é um medicamento recomendado pelos usuários para aliviar a dor de cabeça.
-                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
-                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
-                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
-                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.<br>
+        <table>
+                <img class="med" src="https://i.ibb.co/jG1MsBR/Dorflex.jpg" height=150px width=200px></img>
+                <div id="description">
+                    <br><p style="color:#66c2ff; text-align: left; margin: -10px 0px 5px 10px; font-weight: bold; font-size: 24px;">
+                    Dorflex</p>
+                    <br>Esse é um medicamento recomendado pelos usuários para aliviar a dor de cabeça.
+                    Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.<br>
+                    <br>Avalie o medicamento:
+                </div>
+                <div id="avaliacao">
+                    <a href="javascript:void(0)" onclick="Avaliar(1)">
+                        <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s1" width=30px height=30px></a>
 
-                <br>Avalie o medicamento:
-            </div>
-            <div id="avaliacao">
-                <a href="javascript:void(0)" onclick="Avaliar(1)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s1" width=30px height=30px></a>
+                    <a href="javascript:void(0)" onclick="Avaliar(2)">
+                        <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s2" width=30px height=30px></a>
 
-                <a href="javascript:void(0)" onclick="Avaliar(2)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s2" width=30px height=30px></a>
+                    <a href="javascript:void(0)" onclick="Avaliar(3)">
+                        <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s3" width=30px height=30px></a>
 
-                <a href="javascript:void(0)" onclick="Avaliar(3)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s3" width=30px height=30px></a>
+                    <a href="javascript:void(0)" onclick="Avaliar(4)">
+                        <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s4" width=30px height=30px></a>
 
-                <a href="javascript:void(0)" onclick="Avaliar(4)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s4" width=30px height=30px></a>
-
-                <a href="javascript:void(0)" onclick="Avaliar(5)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s5" width=30px height=30px></a>
-                
-            </div>
-
-        </article>
+                    <a href="javascript:void(0)" onclick="Avaliar(5)">
+                        <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s5" width=30px height=30px></a>
+                </div>
+                <br><tbody id="tbody"></tbody>
+        </table>
     </section>
 
 

@@ -1,1 +1,1 @@
-SELECT * FROM Medicamentos WHERE DescriptionM = 'ASMA' 
+SELECT * FROM Medicamentos 
