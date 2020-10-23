@@ -5,7 +5,8 @@ package PA4.Model;
 //import java.sql.SQLException;
 
 
-public class UsuarioCadastro {
+public class Usuario{
+    
     private int IDUser;
     private String Name;
     private double BirthDate;
@@ -78,6 +79,9 @@ public class UsuarioCadastro {
     public void setIDUser(int iDUser) {
         this.IDUser = iDUser;
     }
+
+	public void add(Usuario usuario) {
+	}
 
 }
 
