@@ -45,8 +45,8 @@ public class UsuarioController {
                                        UriComponentsBuilder builder
                                        ) {
       
-        Usuario cli = servico.salvar(servico.fromUser(novoUsuario));
-        UriComponents uriComponents = builder.path(request.getRequestURI()+"/"+cli.getIDUser()).build();
+        Usuario usu = servico.salvar(servico.fromUser(novoUsuario));
+        UriComponents uriComponents = builder.path(request.getRequestURI()+"/"+usu.getIDUser()).build();
         return ResponseEntity.created(uriComponents.toUri()).build();
     }
 
