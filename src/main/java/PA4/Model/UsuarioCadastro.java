@@ -1,6 +1,11 @@
 package PA4.Model;
 
-public class UsuarioModel {
+//import java.sql.Connection; //Nao tirar essa caralha
+//import java.sql.DriverManager;
+//import java.sql.SQLException;
+
+
+public class UsuarioCadastro {
     private int IDUser;
     private String Name;
     private double BirthDate;
@@ -73,4 +78,6 @@ public class UsuarioModel {
     public void setIDUser(int iDUser) {
         this.IDUser = iDUser;
     }
+
 }
+

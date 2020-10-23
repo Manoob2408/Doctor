@@ -190,6 +190,18 @@ function Buscarf()
     })
 }
 
+function Cadastro()
+{
+    
+    var nome = document.getElementById("name").value;
+    var birthdate = document.getElementById("birthdate").value;
+    var gender = document.getElementById("gender").value;
+    var email = document.getElementById("email").value;
+    var user = document.getElementById("user").value;
+    var psw = document.getElementById("psw").value;
+
+}
+
 function Login(){
 
     var done=0;

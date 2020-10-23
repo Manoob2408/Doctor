@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" th:src="@{/static.js/funcoes.js}"></script>
 
 <head>
     <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="Controller/cadastro.html">Cadastro</a></header>
@@ -70,34 +71,31 @@
         </div>
     </div>
     <section>
-        <article>
-            <img src="https://i.ibb.co/mRXwrv2/Pague-menos.jpg" height=100px width=200px></img>
-            <div class="text">Sorocaba - SP
+        <table>
+            <img class="med" src="https://i.ibb.co/mRXwrv2/Pague-menos.jpg" height=100px width=200px></img>
+            <div id="description">Sorocaba - SP
                 <br>Endereço: lorem ipsum
                 <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
-                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
-                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.<br>
+                <br><br>Avalie o medicamento:
             </div>
             <div id="avaliacao">
-                <br>Avalie a farmácia:<br>
                 <a href="javascript:void(0)" onclick="Avaliar(1)">
                     <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s1" width=30px height=30px></a>
 
-                <a href="javascript:void(0)" onclick="Avaliar(2)">
+                    <a href="javascript:void(0)" onclick="Avaliar(2)">
                     <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s2" width=30px height=30px></a>
 
-                <a href="javascript:void(0)" onclick="Avaliar(3)">
+                    <a href="javascript:void(0)" onclick="Avaliar(3)">
                     <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s3" width=30px height=30px></a>
 
-                <a href="javascript:void(0)" onclick="Avaliar(4)">
+                    <a href="javascript:void(0)" onclick="Avaliar(4)">
                     <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s4" width=30px height=30px></a>
 
-                <a href="javascript:void(0)" onclick="Avaliar(5)">
+                    <a href="javascript:void(0)" onclick="Avaliar(5)">
                     <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s5" width=30px height=30px></a>
-                <p id="rating">0</p>
             </div>
 
-        </article>
+        </table>
     </section>
 
 
