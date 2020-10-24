@@ -172,10 +172,7 @@ function Buscar() {
 
         }
         
-    }
-    
-
-    
+    }  
 
 }
 
@@ -190,39 +187,6 @@ function Buscarf()
     })
 }
 
-function Cadastro()
-{
-    usuario = {};
-    
-    usuario.id = $("#id").val();
-    console.log(usuario.id);
-    
-    usuario.nome  = $("#nome").val();
-    usuario.email = $("#email").val();
-    usuario.birthdate = $("#birthdate").val();
-    usuario.gender = $("#gender").val();
-    usuario.user = $("#user").val();
-    usuario.password = $("#psw").val();
-
-    
-	$.ajax({
-		url: "/cadastro/cadastrar",
-		type: 'POST',
-		dataType: "json",
-		contentType:'application/json',
-        data: {itens: JSON.stringify(jsonObjeto) },
-        success: function()
-        {
-            alert("cadastro realizado com sucesso!");
-        },
-        error: function(err)
-        {
-            console.log(err)
-        },
-
-    })
-    
-}
 
 function Login(){
 

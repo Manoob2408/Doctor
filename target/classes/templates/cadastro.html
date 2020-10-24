@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <link href="css/style.css" rel="stylesheet">
-<script type="text/javascript" th:src="@{/static.js/funcoes.js}"></script>
+<script type="text/javascript" th:src="@{/static.js/cadastro.js}"></script>
 
 <head>
     <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="cadastro.html">Cadastro</a></header>
@@ -34,29 +34,29 @@
             <div class="container">
                 <input type="hidden" id="id" name="id"/>
 
-                <label for="uname"><b>Nome Completo</b></label><br>
+                <label for="uname"><strong>Nome Completo</strong></label><br>
                 <input id="nome" type="text" placeholder="Insira o seu nome" name="uname" required><br>
 
-                <label for="date"><b>Data de nascimento</b></label><br>
+                <label for="date"><strong>Data de nascimento</strong></label><br>
                 <input id="birthdate" style="color: #777d78" type="date" required><br>
 
-                <label for="gender"><b>Gênero</b></label><br>
+                <label for="gender"><strong>Gênero</strong></label><br>
                 <select name="gender" id="gender">
                         <option value="Masculino">Masculino</option>
                         <option value="Feminino">Feminino</option>
                         <option value="Não quero declarar">Não quero declarar</option>
                 </select>
 
-                <label for="email"><b>Email</b></label><br>
+                <label for="email"><strong>Email</strong></label><br>
                 <input type="text" placeholder="exemplo@exemplo.com" name="email" id="email" required><br>
 
-                <label for="user"><b>Usuário</b></label><br>
+                <label for="user"><strong>Usuário</strong></label><br>
                 <input type="text" placeholder="Insira o usuário" name="user" id="user" required><br>
 
-                <label for="psw"><b>Senha</b></label><br>
+                <label for="psw"><strong>Senha</strong></label><br>
                 <input type="password" placeholder="Insira a senha" name="psw" id="psw" required><br>
 
-                <button type="submit" href="javascript:void(0)" onclick="Cadastro()">Cadastrar</button>
+                <button id="enviar "type="submit" href="javascript:void(0)">Cadastrar</button>
             </div><br>
             <div class="container">
                 <button type="button" class="cancelbtn">Cancelar</button>

@@ -1,31 +1,44 @@
 package PA4.Model;
 
-//import java.sql.Connection; //Nao tirar essa caralha
-//import java.sql.DriverManager;
-//import java.sql.SQLException;
+import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class Usuario{
+import org.springframework.stereotype.Service;
+
+@Entity /* A anotação @Entity faz com que o JPA saiba que aquela classe deve ser manipulada por ele */
+@Table(name="Usuario") /*define que esta classe possui uma tabela chamada usuario no banco de dados */
+@Service
+public class Usuario implements Serializable{
+
+    private static final long serialVersionUID = 1L;
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;   
+    @Column
     private int IDUser;
+    @Column
     private String Name;
+    @Column
     private double BirthDate;
+    @Column
     private String Gender;
+    @Column
     private String Email;
-    private String Username;
+    @Column
+    private String UserName;
+    @Column
     private String Password;
-    private String Allergies;
+
 
     public int getIDUser() {
         return IDUser;
-    }
-
-    public String getAllergies() {
-        return Allergies;
-    }
-
-    public void setAllergies(String allergies) {
-        this.Allergies = allergies;
     }
 
     public String getPassword() {
@@ -37,11 +50,11 @@ public class Usuario{
     }
 
     public String getUsername() {
-        return Username;
+        return UserName;
     }
 
     public void setUsername(String username) {
-        this.Username = username;
+        this.UserName = username;
     }
 
     public String getEmail() {
@@ -80,8 +93,6 @@ public class Usuario{
         this.IDUser = iDUser;
     }
 
-	public void add(Usuario usuario) {
-	}
 
 }
 

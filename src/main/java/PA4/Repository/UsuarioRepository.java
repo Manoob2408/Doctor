@@ -29,7 +29,7 @@ public class UsuarioRepository {
 
 	public Usuario salvar(Usuario usuario) {
         usuario.setIDUser(nextId++);
-        usuario.add(usuario);
+        usuarios.add(usuario);
         return usuario;
 	}
 

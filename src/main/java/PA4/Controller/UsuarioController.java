@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import PA4.DTO.UsuarioDTO;
 import PA4.Model.Usuario;
 import PA4.Service.UsuarioService;
 
@@ -25,7 +26,7 @@ import PA4.Service.UsuarioService;
 public class UsuarioController {
 
 
-    @Autowired
+	@Autowired
     private UsuarioService servico;
 
     @GetMapping
@@ -34,18 +35,18 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Usuario> getUsuarioByCodigo(@PathVariable int id) {
-        Usuario cli = servico.getUsuarioById(id);
-        return ResponseEntity.ok(cli);	
+    public ResponseEntity<Usuario> getClienteByCodigo(@PathVariable int id) {
+        Usuario usu = servico.getUsuarioById(id);
+        return ResponseEntity.ok(usu);	
     }
 
     @PostMapping
-    public ResponseEntity<Void> salvar(@RequestBody Usuario novoUsuario, 
+    public ResponseEntity<Void> salvar(@RequestBody UsuarioDTO novoUsuario, 
                                        HttpServletRequest request,
                                        UriComponentsBuilder builder
                                        ) {
       
-        Usuario usu = servico.salvar(servico.fromUser(novoUsuario));
+        Usuario usu = servico.salvar(servico.fromDTO(novoUsuario));
         UriComponents uriComponents = builder.path(request.getRequestURI()+"/"+usu.getIDUser()).build();
         return ResponseEntity.created(uriComponents.toUri()).build();
     }
@@ -58,17 +59,15 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Usuario> atualizar(@PathVariable int id, @RequestBody Usuario usu){
+    public ResponseEntity<Usuario> atualizar(@PathVariable int id, @RequestBody UsuarioDTO usuarioDTO){
     
-        Usuario usuario = servico.fromUser(usu);
+        Usuario usuario = servico.fromDTO(usuarioDTO);
         usuario.setIDUser(id);
         usuario = servico.update(usuario);
         return ResponseEntity.ok(usuario);
         
     }
     
-    
 
 
 }
-

@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import PA4.DTO.UsuarioDTO;
 import PA4.Model.Usuario;
 import PA4.Repository.UsuarioRepository;
 
@@ -22,16 +23,11 @@ public class UsuarioService {
         return op.orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Usuario nao cadastrado: " + id));
     }
 
-    public Usuario fromUser(Usuario usu){
+    public Usuario fromDTO(UsuarioDTO dto){
         Usuario usuario = new Usuario();
 
-        usuario.setName(usu.getName());
-        usuario.setEmail(usu.getEmail());
-        usuario.setBirthDate(usu.getBirthDate());
-        usuario.setGender(usu.getGender());
-        usuario.setUsername(usu.getUsername());
-        usuario.setPassword(usu.getPassword());
-
+        usuario.setName(dto.getNome());
+        usuario.setEmail(dto.getEmail());
         return usuario;
     }
 
