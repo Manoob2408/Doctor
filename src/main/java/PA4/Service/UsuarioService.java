@@ -22,8 +22,6 @@ public class UsuarioService {
         return op.orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Usuario nao cadastrado: " + id));
     }
 
-
-
     public Usuario fromUser(Usuario usu){
         Usuario usuario = new Usuario();
 

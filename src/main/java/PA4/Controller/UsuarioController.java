@@ -4,9 +4,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import PA4.Model.Usuario;
-import PA4.Service.UsuarioService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import PA4.Model.Usuario;
+import PA4.Service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
