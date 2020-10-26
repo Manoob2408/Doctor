@@ -1,7 +1,7 @@
 # My-Simple-Doctor
 
 # Desenvolvedores:
-Joel Ribeiro Bonfim Junior RA:190304
+Joel Ribeiro Bonfim Junior RA:190304 Link: https://github.com/decowo
 
 Emanuela Lopez Ferreira RA:190176 Link: https://github.com/Manoob2408
 
