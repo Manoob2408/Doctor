@@ -1,4 +1,4 @@
-# My-Simple-Doctor
+# My-Simple-Doctor Web Development
 
 # Desenvolvedores:
 Joel Ribeiro Bonfim Junior RA:190304 Link: https://github.com/decowo
@@ -10,4 +10,4 @@ Desenvolvimento web para construção de um portal em que o usuário, ao inserir
 
 # Tecnologias utilizadas:
 HTML, CSS, JavaScript, JPA, JDBC, Spring Boot, Java, Ajax, SQL Server Management Studio, SQL Express 2019.
-# Doctor
+
