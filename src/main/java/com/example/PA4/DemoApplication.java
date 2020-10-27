@@ -13,7 +13,7 @@ public class DemoApplication{
 
 		SpringApplication.run(DemoApplication.class, args);
 
-		DriverManager.getConnection("jdbc:mysql://localhost/Doctor","adminManu","adminManu");
+		DriverManager.getConnection("jdbc:mysql://15.0.2000:3306/Doctor","adminManu","adminManu");
         System.out.println("Conectado!");
 
 	}
