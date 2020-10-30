@@ -2,15 +2,14 @@ package com.example.PA4.Entidade;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Medicamentos implements Serializable{
-    
-    /**
-     *
-     */
+@Entity
+public class Medicamento implements Serializable{
+
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -21,6 +20,10 @@ public class Medicamentos implements Serializable{
     private String indicacao;
     private String avaliacao;
 
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+    
     public int getIdmed() {
         return idmed;
     }
