@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <link href="css/style.css" rel="stylesheet">
-<script type="text/javascript" th:src="@{/static.js/cadastro.js}"></script>
 
 <head>
     <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="cadastro.html">Cadastro</a></header>
     <title>Cadastro</title>
     <meta charset="utf-8">
-    <script src="funcoes.js"></script>
+
 
     <img src="https://i.ibb.co/YywLC81/msd-1.png" height=130px width=130px></img>
     <h1>My Simple Doctor</h1>
@@ -27,21 +26,19 @@
         </div>
     </aside>
     <article>
-        <form class="cadastro">
+        <form th:action="@{/salvar}" class="cadastro" method="POST">
             <div class="imgcontainer">
                 <img src="https://i.ibb.co/Msh3bXY/User.png" alt="User" class="avatar"></img>
             </div><br>
             <div class="container">
-                <input type="hidden" id="id" name="id"/>
+                <label for="nome"><strong>Nome Completo</strong></label><br>
+                <input id="nome" type="text" placeholder="Insira o seu nome" name="nome" required><br>
 
-                <label for="uname"><strong>Nome Completo</strong></label><br>
-                <input id="nome" type="text" placeholder="Insira o seu nome" name="uname" required><br>
+                <label for="birth"><strong>Data de nascimento</strong></label><br>
+                <input id="birth" style="color: #777d78" type="date" required><br>
 
-                <label for="date"><strong>Data de nascimento</strong></label><br>
-                <input id="birthdate" style="color: #777d78" type="date" required><br>
-
-                <label for="gender"><strong>Gênero</strong></label><br>
-                <select name="gender" id="gender">
+                <label for="genero"><strong>Gênero</strong></label><br>
+                <select name="genero" id="genero">
                         <option value="Masculino">Masculino</option>
                         <option value="Feminino">Feminino</option>
                         <option value="Não quero declarar">Não quero declarar</option>
@@ -50,18 +47,29 @@
                 <label for="email"><strong>Email</strong></label><br>
                 <input type="text" placeholder="exemplo@exemplo.com" name="email" id="email" required><br>
 
-                <label for="user"><strong>Usuário</strong></label><br>
-                <input type="text" placeholder="Insira o usuário" name="user" id="user" required><br>
+                <label for="username"><strong>Usuário</strong></label><br>
+                <input type="text" placeholder="Insira o usuário" name="username" id="username" required><br>
 
-                <label for="psw"><strong>Senha</strong></label><br>
-                <input type="password" placeholder="Insira a senha" name="psw" id="psw" required><br>
+                <label for="password"><strong>Senha</strong></label><br>
+                <input type="password" placeholder="Insira a senha" name="password" id="password" required><br>
 
-                <button id="enviar "type="submit" href="javascript:void(0)">Cadastrar</button>
+                <button id="enviar" type="submit">Cadastrar</button>
             </div><br>
             <div class="container">
                 <button type="button" class="cancelbtn">Cancelar</button>
             </div><br>
         </form>
+        <table>
+            <tr th:each = "usuario : ${usuarios}">
+                <td th:text =${usuario.id}></td>
+                <td th:text =${usuario.nome}></td>
+                <td th:text =${usuario.genero}></td>
+                <td th:text =${usuario.email}></td>
+                <td th:text =${usuario.birth}></td>
+                <td th:text =${usuario.username}></td>
+                <td th:text =${usuario.password}></td>
+            </tr>
+        </table>
     </article>
     <footer>
 

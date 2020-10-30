@@ -19,4 +19,9 @@ public class UsuarioService {
         return repository.findAll();
     }
 
+    public void salvar(Usuario usuario)
+    {
+        repository.save(usuario);
+    }
+
 }

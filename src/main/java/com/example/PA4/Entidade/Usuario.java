@@ -1,9 +1,14 @@
 package com.example.PA4.Entidade;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+
 
 @Entity
 public class Usuario implements Serializable
@@ -12,12 +17,15 @@ public class Usuario implements Serializable
     private static final long serialVersionUID = 1L;
     
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)//Chave automática
     private int id;
     private String nome;
-    private String birth;
+    private Date birth;
     private String genero;
+    private String email;
     private String username;
     private String password;
+
 
     public static long getSerialversionuid() {
         return serialVersionUID;
@@ -39,20 +47,20 @@ public class Usuario implements Serializable
         this.nome = nome;
     }
 
-    public String getBirth() {
-        return birth;
-    }
-
-    public void setBirth(String birth) {
-        this.birth = birth;
-    }
-
     public String getGenero() {
         return genero;
     }
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {
@@ -73,9 +81,17 @@ public class Usuario implements Serializable
 
     @Override
     public String toString() {
-        return "Usuario [birth=" + birth + ", genero=" + genero + ", id=" + id + ", nome=" + nome + ", password="
-                + password + ", username=" + username + "]";
+        return "Usuario [id=" + id + ", nome=" + nome + ", genero=" + genero + ", email=" + email + ", birth=" + birth
+                + ", username=" + username + ", password=" + password + "]";
     }
 
- 
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
+  
 }
