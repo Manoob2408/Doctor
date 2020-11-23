@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<link href="css/style.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet"/>
 <script type="text/javascript" th:src="@{/static.js/funcoes.js}"></script>
 
 <head>
-    <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="Controller/cadastro.html">Cadastro</a></header>
+    <header><a href="medicamentos">Home</a><a href="login">Login</a><a href="usuarios">Cadastro</a></header>
     <title>Farmácias</title>
     <meta charset="utf-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
     <script src="funcoes.js"></script>
 
     <img src="https://i.ibb.co/YywLC81/msd-1.png" height=130px width=130px></img>
@@ -64,41 +65,31 @@
     <div class="menu">
         <div>
             <h2>Menu</h2>
-            <a href="#">Fitoterápicos</a><br>
-            <a href="#">Homeopáticos</a><br>
-            <a href="farmacias.html">Farmácias</a><br>
+            <a href="localhost:8080/medicamentos">Fitoterápicos</a><br>
+            <a href="localhost:8080/medicamentos">Homeopáticos</a><br>
+            <a href="farmacias">Farmácias</a><br>
             <a href="#">Médicos</a>
         </div>
     </div>
     <section>
-        <table>
-            <img class="med" src="https://i.ibb.co/mRXwrv2/Pague-menos.jpg" height=100px width=200px></img>
-            <div id="description">Sorocaba - SP
-                <br>Endereço: lorem ipsum
-                <br>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
-                <br><br>Avalie o medicamento:
-            </div>
-            <div id="avaliacao">
-                <a href="javascript:void(0)" onclick="Avaliar(1)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s1" width=30px height=30px></a>
-
-                    <a href="javascript:void(0)" onclick="Avaliar(2)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s2" width=30px height=30px></a>
-
-                    <a href="javascript:void(0)" onclick="Avaliar(3)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s3" width=30px height=30px></a>
-
-                    <a href="javascript:void(0)" onclick="Avaliar(4)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s4" width=30px height=30px></a>
-
-                    <a href="javascript:void(0)" onclick="Avaliar(5)">
-                    <img src="https://i.ibb.co/4YL84Hk/starvazia.png" id="s5" width=30px height=30px></a>
-            </div>
-
-        </table>
+        <article class="farmacias_info">
+            <br>
+            <tr th:each="farmacias: ${farmacias}">
+                <br>
+                <a>ID Farmacia: </a>
+                <td th:text=${farmacias.idfarm}></td><br>
+                <br>
+                <a>Descrição da farmacia: </a>
+                <td th:text=${farmacias.descricao}></td><br>
+                <br>
+                <a>Estado: </a>
+                <td th:text=${farmacias.estado}></td><br>
+                <br>
+                <a>Localizacao: </a>
+                <td th:text=${farmacias.localizacao}></td><br><br>
+            </tr>
+        </article>
     </section>
-
-
 
     <footer>
 

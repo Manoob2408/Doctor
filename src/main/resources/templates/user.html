@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<link href="css/style.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/styleuser.css" rel="stylesheet">
 
 <head>
-    <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="cadastro.html">Cadastro</a></header>
+    <header><a href="localhost:8080/medicamentos">Home</a><a href="localhost:8080/login">Login</a><a href="localhost:8080/usuarios">Cadastro</a></header>
     <title>My Simple Doctor</title>
     <meta charset="utf-8">
     <script src="funcoes.js"></script>
@@ -32,11 +33,35 @@
     </div>
 
     <article class="user_info">
-        <h3>Nome do usuário: </h3><br>
-        <h3>Data de nascimento: __/__/____</h3><br>
-        <h3>Endereço:</h3>
-        <h3>Rua:</h3>
-
+        <tr th:each="user: ${user}">
+            <br>
+            <a>Meu ID: </a>
+            <td th:text=${user.id}></td><br>
+            <br>
+            <br>
+            <a>Minha data de nascimento: </a>
+            <td th:text=${user.birth}></td><br>
+            <br>
+            <br>
+            <a>Meu email: </a>
+            <td th:text=${user.email}></td>
+            <br>
+            <br>
+            <br>
+            <a>Meu nome: </a>
+            <td th:text=${user.nome}></td><br>
+            <br>
+            <br>
+            <a>Meu username: </a>
+            <td th:text=${user.username}></td><br>
+            <br>
+            <br>
+            <a>Minhas alergias: </a>
+            <td th:text=${user.alergias}></td><br>
+            <br>
+            <br>
+            <a>Meu Estado: </a>
+            <td th:text=${user.estado}></td><br>
 
     </article>
 

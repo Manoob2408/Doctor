@@ -25,6 +25,24 @@ public class Usuario implements Serializable
     private String email;
     private String username;
     private String password;
+    private String alergias;
+    private String Estado;
+
+    public String getEstado() {
+        return this.Estado;
+    }
+
+    public void setEstado(String Estado) {
+        this.Estado = Estado;
+    }
+
+    public String getAlergias() {
+        return this.alergias;
+    }
+
+    public void setAlergias(String alergias) {
+        this.alergias = alergias;
+    }
 
 
     public static long getSerialversionuid() {

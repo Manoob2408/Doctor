@@ -19,7 +19,15 @@ public class Medicamento implements Serializable{
     private String urlimagem;
     private String nome;
     private String indicacao;
-    private String avaliacao;
+    private float avaliacao;
+
+    public float getAvaliacao() {
+        return this.avaliacao;
+    }
+
+    public void setAvaliacao(float avaliacao) {
+        this.avaliacao = avaliacao;
+    }
 
     public static long getSerialversionuid() {
         return serialVersionUID;
@@ -57,13 +65,7 @@ public class Medicamento implements Serializable{
         this.indicacao = indicacao;
     }
 
-    public String getAvaliacao() {
-        return avaliacao;
-    }
 
-    public void setAvaliacao(String avaliacao) {
-        this.avaliacao = avaliacao;
-    }
 
     @Override
     public String toString() {

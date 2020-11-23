@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - DemoApplication",
             "request": "launch",
             "mainClass": "com.example.PA4.DemoApplication",
+            "projectName": "doctor"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.PA4.DemoApplication",
             "projectName": "demo"
         },
         {

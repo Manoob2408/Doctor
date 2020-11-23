@@ -22,7 +22,6 @@ public class UsuarioController {
     {
         ModelAndView mv = new ModelAndView("usuariosTemplate");
         mv.addObject("usuarios", servico.getUsuarios());
-
         return mv;
     }
 

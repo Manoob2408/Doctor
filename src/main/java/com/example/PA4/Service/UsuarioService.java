@@ -23,5 +23,14 @@ public class UsuarioService {
     {
         repository.save(usuario);
     }
+    
+    public List<Usuario> getUsers() {
+        return repository.findAll();
+    }
+
+    public Usuario getuserbyid(int Id)
+    {
+        return repository.findById(Id).get();
+    }
 
 }

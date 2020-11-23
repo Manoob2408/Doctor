@@ -3,7 +3,7 @@
 <link href="css/style.css" rel="stylesheet">
 
 <head>
-    <header><a href="index.html">Home</a><a href="login.html">Login</a><a href="cadastro.html">Cadastro</a></header>
+    <header><a href="medicamentos">Home</a><a href="login">Login</a><a href="usuarios">Cadastro</a></header>
     <title>Cadastro</title>
     <meta charset="utf-8">
 
@@ -19,9 +19,9 @@
     <aside>
         <div>
             <h2>Menu</h2>
-            <a href="#">Fitoterápicos</a><br>
-            <a href="#">Homeopáticos</a><br>
-            <a href="farmacias.html">Farmácias</a><br>
+            <a href="medicamentos">Fitoterápicos</a><br>
+            <a href="medicamentos">Homeopáticos</a><br>
+            <a href="farmacias">Farmácias</a><br>
             <a href="#">Médicos</a>
         </div>
     </aside>
@@ -44,8 +44,14 @@
                         <option value="Não quero declarar">Não quero declarar</option>
                 </select>
 
+                <label for="Alergias"><strong>Alergia</strong></label><br>
+                <input type="text" placeholder="" name="Alergias" id="Alergias" required><br>
+
                 <label for="email"><strong>Email</strong></label><br>
                 <input type="text" placeholder="exemplo@exemplo.com" name="email" id="email" required><br>
+
+                <label for="Estado"><strong>Estado</strong></label><br>
+                <input type="text" placeholder="" name="Estado" id="Estado" required><br>
 
                 <label for="username"><strong>Usuário</strong></label><br>
                 <input type="text" placeholder="Insira o usuário" name="username" id="username" required><br>
@@ -60,14 +66,17 @@
             </div><br>
         </form>
         <table>
-            <tr th:each = "usuario : ${usuarios}">
-                <td th:text =${usuario.id}></td>
-                <td th:text =${usuario.nome}></td>
-                <td th:text =${usuario.genero}></td>
-                <td th:text =${usuario.email}></td>
-                <td th:text =${usuario.birth}></td>
-                <td th:text =${usuario.username}></td>
-                <td th:text =${usuario.password}></td>
+            <tr th:each="usuario : ${usuarios}">
+                <td th:text=${usuario.id}></td>
+                <td th:text=${usuario.nome}></td>
+                <td th:text=${usuario.genero}></td>
+                <td th:text=${usuario.email}></td>
+                <td th:text=${usuario.birth}></td>
+                <td th:text=${usuario.alergias}></td>
+                <td th:text=${usuario.estado}></td>
+                <td th:text=${usuario.username}></td>
+                <td th:text=${usuario.password}></td>
+
             </tr>
         </table>
     </article>
