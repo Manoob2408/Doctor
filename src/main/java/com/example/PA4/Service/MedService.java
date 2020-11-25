@@ -26,6 +26,7 @@ public class MedService {
     {
         return repository.findById(idmed).get();
     }
+
     public void salvar(Medicamento med)
     {
         repository.save(med);

@@ -122,23 +122,6 @@ header a {
     margin-right: 10px;
 }
 
-#description {
-    color: #777d78;
-    text-align: justify;
-    font-size: 16px;
-    font-family: Verdana;
-    margin: 40px 0px 0px 100px;
-    max-width: 1000px;
-}
-
-tbody {
-    color: #777d78;
-    text-align: center;
-    font-size: 16px;
-    font-family: Verdana;
-    margin: 0px 0px 0px 100px;
-    max-width: 1000px;
-}
 
 footer {
     text-align: center;
@@ -147,7 +130,8 @@ footer {
     color: white;
     font-family: Verdana;
     font-size: 14px;
-    margin-top: 1000px;
+    bottom: 0px;
+
 }
 
 #divBusca {
@@ -337,14 +321,20 @@ img.avatar {
     border: 2px solid #66c2ff;
     border-radius: 10px;
     float: left;
-    margin: 100px 10px 0px 100px;
+    margin: 100px 10px px 100px;
     width: 800px;
-    height: 700px;
+    height: auto;
+    color: #777d78;
+    font-size: 16px;
+    font-family: Verdana;
+
 }
 
-.user_info h3 {
+.user_info a{
     color: #66c2ff;
     font-size: 20px;
     font-family: Verdana;
-    margin-left: 10px;
+    margin: 5px 0px 10px 10px;
+    font-weight: bold;
 }
+

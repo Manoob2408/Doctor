@@ -1,14 +1,10 @@
 package com.example.PA4.Entidade;
 
 import java.io.Serializable;
-import java.sql.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-
 
 @Entity
 public class Usuario implements Serializable
@@ -20,7 +16,7 @@ public class Usuario implements Serializable
     @GeneratedValue(strategy = GenerationType.AUTO)//Chave automática
     private int id;
     private String nome;
-    private Date birth;
+    private String birth;
     private String genero;
     private String email;
     private String username;
@@ -103,13 +99,14 @@ public class Usuario implements Serializable
                 + ", username=" + username + ", password=" + password + "]";
     }
 
-    public Date getBirth() {
+    public String getBirth() {
         return birth;
     }
 
-    public void setBirth(Date birth) {
+    public void setBirth(String birth) {
         this.birth = birth;
     }
 
+ 
   
 }

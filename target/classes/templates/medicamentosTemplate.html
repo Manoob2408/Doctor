@@ -13,9 +13,9 @@
     <br>
     <br>
     <div>
-        <form id="divBusca" th:action="@{/medicamentos/{indicacao}}" method="GET">
-            <input type="text" name="indicacao" id="indicacao" placeholder="Insira seus sintomas aqui" />
-            <button type="submit" id="btnBusca">Buscar</button>
+        <form id="divBusca">
+            <input type="text" id="indicacao" placeholder="Insira seus sintomas aqui" />
+            <button  href="javascript:void(0)" onclick="Buscar()" type="submit" id="btnBusca">Buscar</button>
         </form>
     </div>
 
@@ -54,7 +54,7 @@
             <br>
             <a>Link para compra: </a>
             <td th:text=${medicamento.urlimagem}></td><br>
-
+            
     </article>
 
 
