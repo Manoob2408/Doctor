@@ -141,3 +141,12 @@ function Buscar()
     window.open(url+input,"_blank");
 
 }
+
+function Buscarf()
+{
+    var input = document.getElementById("state").value;
+    var url = "http://localhost:8080/medicamentos/";
+    var link = url+input;
+    window.open(url+input,"_blank");
+
+}
