@@ -22,14 +22,14 @@ public class Usuario implements Serializable
     private String username;
     private String password;
     private String alergias;
-    private String Estado;
+    private String estado;
 
     public String getEstado() {
-        return this.Estado;
+        return this.estado;
     }
 
-    public void setEstado(String Estado) {
-        this.Estado = Estado;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getAlergias() {
@@ -93,12 +93,6 @@ public class Usuario implements Serializable
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "Usuario [id=" + id + ", nome=" + nome + ", genero=" + genero + ", email=" + email + ", birth=" + birth
-                + ", username=" + username + ", password=" + password + "]";
-    }
-
     public String getBirth() {
         return birth;
     }
@@ -107,6 +101,11 @@ public class Usuario implements Serializable
         this.birth = birth;
     }
 
- 
+    @Override
+    public String toString() {
+        return "Usuario [alergias=" + alergias + ", birth=" + birth + ", email=" + email + ", estado=" + estado
+                + ", genero=" + genero + ", id=" + id + ", nome=" + nome + ", password=" + password + ", username="
+                + username + "]";
+    } 
   
 }
