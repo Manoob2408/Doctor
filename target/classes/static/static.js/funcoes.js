@@ -119,11 +119,11 @@ function Login() {
     var password = document.getElementById("pwd").value;
 
     if (username == "manu" && password == "123") {
-        window.location = "http://localhost:8080/user";
+        window.location = "http://localhost:8080/user/306";
         done = 1;
     }
     if (username == "joel" && password == "123") {
-        window.location = "http://localhost:8080/user";
+        window.location = "http://localhost:8080/user/305";
         done = 1;
     }
     if (done == 0) { alert("Senha ou Usuário inválido." + document.getElementById("uname").value); }
