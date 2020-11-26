@@ -145,7 +145,7 @@ function Buscar()
 function Buscarf()
 {
     var input = document.getElementById("state").value;
-    var url = "http://localhost:8080/medicamentos/";
+    var url = "http://localhost:8080/farmacias/";
     var link = url+input;
     window.open(url+input,"_blank");
 
